@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class Connector {
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(
-                "jdbc:postgresql://localhost:6200/musical_dev_app_db",
-                "root",
-                "123"
+                "jdbc:postgresql://localhost:5432/music_app_db",
+                "postgres",
+                "12345678"
         );
     }
 }

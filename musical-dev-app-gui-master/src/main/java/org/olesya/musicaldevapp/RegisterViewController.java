@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import lombok.extern.java.Log;
 import org.olesya.musicaldevapp.data.entity.Role;
 import org.olesya.musicaldevapp.data.entity.User;
 import org.olesya.musicaldevapp.data.repository.RoleRepository;
@@ -23,6 +24,7 @@ import java.util.UUID;
 import static org.olesya.musicaldevapp.utils.ControllerUtils.getPositiveIntegerFromTextField;
 import static org.olesya.musicaldevapp.utils.ControllerUtils.showCommonWarningAlert;
 
+@Log
 public class RegisterViewController {
     @FXML
     private Button registerButton;
