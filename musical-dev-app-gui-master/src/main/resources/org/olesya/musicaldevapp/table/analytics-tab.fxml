@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.olesya.musicaldevapp.controller.AnalyticsController">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="543.0" prefWidth="1463.0">
+        <TableView fx:id="analyticsTable" prefHeight="299.0" prefWidth="1466.0">
+            <columns>
+                <TableColumn fx:id="requirementIdAnalyticsTableColumn" prefWidth="202.20000302791595" text="ID требования" />
+                <TableColumn fx:id="projectNameAnalyticsTableColumn" minWidth="0.0" prefWidth="147.79998779296875" text="Имя проекта" />
+                <TableColumn fx:id="requirementTypeNameAnalyticsTableColumn" minWidth="0.0" prefWidth="138.60000610351562" text="Тип требования" />
+                <TableColumn fx:id="requirementContentAnalyticsTableColumn" minWidth="0.0" prefWidth="149.199951171875" text="Контент" />
+                <TableColumn fx:id="createDateAnalyticsTableColumn" minWidth="0.0" prefWidth="154.0" text="Дата создания" />
+                <TableColumn fx:id="lastChangeDateAnalyticsTableColumn" minWidth="0.0" prefWidth="220.5999755859375" text="Дата последнего редактирования" />
+                <TableColumn fx:id="fileExtensionAnalyticsTableColumn" minWidth="0.0" prefWidth="200.5999755859375" text="Расширение файла контента" />
+            </columns>
+        </TableView>
+      <VBox layoutX="-1.0" layoutY="299.0" prefHeight="246.0" prefWidth="1466.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Поиск">
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="ID требования:">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="requirementIdAnalyticsTextField" prefHeight="26.0" prefWidth="270.0" promptText="Введите ID требования (UUID)..." />
+                  <Label layoutX="77.0" layoutY="52.0" text="Имя проекта:">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="projectNameAnalyticsTextField" layoutX="170.0" layoutY="47.0" prefHeight="26.0" prefWidth="270.0" promptText="Введите имя проекта (Строка)..." />
+                  <Label layoutX="440.0" layoutY="52.0" text="Тип:">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="requirementTypeNameAnalyticsTextField" layoutX="536.0" layoutY="47.0" prefHeight="26.0" prefWidth="270.0" promptText="Введите тип требования (Строка)..." />
+                  <Button fx:id="analyticsFilterButton" mnemonicParsing="false" text="Фильтровать">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="1466.0">
+               <children>
+                  <Label text="Изменение">
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <VBox prefHeight="84.0" prefWidth="1366.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="1366.0">
+                           <children>
+                              <Label text="ID требования:">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="requirementIdInputField" editable="false" prefHeight="26.0" prefWidth="202.0" promptText="Заполняется автоматически" style="-fx-background-color: e6e6e6;">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin></TextField>
+                              <Label layoutX="10.0" layoutY="28.0" text="Имя проекта:">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="projectNameInputField" prefHeight="26.0" prefWidth="190.0" promptText="Введите имя проекта (Строка)...">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label layoutX="316.0" layoutY="28.0" text="Тип требования:">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ChoiceBox fx:id="requirementTypeChoiceBox" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                              <Label layoutX="601.0" layoutY="28.0" text="Контент:">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="contentInputField" layoutX="400.0" layoutY="23.0" prefHeight="26.0" prefWidth="204.0" promptText="Введите путь к файлу (Строка)...">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="76.0" prefWidth="1366.0">
+                           <children>
+                              <Label text="Дата создания:">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="createDateInputField" editable="false" prefHeight="26.0" prefWidth="202.0" promptText="Заполняется автоматически" style="-fx-background-color: e6e6e6;">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label layoutX="10.0" layoutY="21.0" text="Дата последнего редактирования:">
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="lastChangeDateInputField" editable="false" layoutX="103.0" layoutY="16.0" prefHeight="26.0" prefWidth="202.0" promptText="Заполняется автоматически" style="-fx-background-color: e6e6e6;">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label layoutX="316.0" layoutY="21.0" text="Расширение файла контента:">
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="fileExtensionInputField" prefHeight="26.0" prefWidth="226.0" promptText="Введите расширение файла (Строка)..." />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></HBox>
+            <HBox alignment="CENTER" prefHeight="41.0" prefWidth="1466.0">
+               <children>
+                  <Button fx:id="saveChangesButton" disable="true" mnemonicParsing="false" text="Изменить">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deleteButton" disable="true" layoutX="703.0" layoutY="18.0" mnemonicParsing="false" text="Удалить">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="addButton" layoutX="748.0" layoutY="18.0" mnemonicParsing="false" text="Добавить">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="stopSelectionButton" mnemonicParsing="false" text="Снять выделение" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+    </AnchorPane>
+</AnchorPane>

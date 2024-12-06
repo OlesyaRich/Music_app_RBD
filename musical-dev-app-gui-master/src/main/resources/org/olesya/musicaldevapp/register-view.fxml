@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="271.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.olesya.musicaldevapp.RegisterViewController">
+<children>
+    <Label layoutX="56.0" layoutY="66.0" text="Имя пользователя*:" />
+    <Label layoutX="47.0" layoutY="104.0" text="Пароль пользователя*:" />
+    <Button fx:id="registerButton" layoutX="323.0" layoutY="219.0" mnemonicParsing="false" text="Зарегистрироваться" />
+    <Button fx:id="goBackButton" layoutX="177.0" layoutY="219.0" mnemonicParsing="false" text="Назад" />
+    <TextField fx:id="usernameTextField" layoutX="180.0" layoutY="62.0" prefHeight="26.0" prefWidth="394.0" promptText="Введите логин..." />
+    <PasswordField fx:id="passwordTextField" layoutX="180.0" layoutY="100.0" prefHeight="26.0" prefWidth="394.0" promptText="Введите пароль...." />
+    <Label layoutX="226.0" layoutY="14.0" text="Регистрация">
+        <font>
+            <Font name="System Bold" size="24.0" />
+        </font>
+    </Label>
+      <ChoiceBox fx:id="roleChoiceBox" layoutX="180.0" layoutY="177.0" prefWidth="150.0" />
+      <TextField fx:id="ageTextField" layoutX="181.0" layoutY="138.0" promptText="Введите возраст..." />
+      <Label layoutX="85.0" layoutY="142.0" text="Возраст:" />
+      <Label layoutX="94.0" layoutY="181.0" text="Роль*:" />
+</children>
+</AnchorPane>

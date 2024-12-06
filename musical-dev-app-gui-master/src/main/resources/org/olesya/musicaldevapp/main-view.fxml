@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="629.0" prefWidth="1551.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.olesya.musicaldevapp.MainViewController">
+   <children>
+      <HBox alignment="CENTER" layoutX="8.0" layoutY="14.0" prefHeight="27.0" prefWidth="1544.0">
+         <children>
+            <Label fx:id="currentUserLabel" />
+            <Button fx:id="exitButton" mnemonicParsing="false" text="Выйти">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></Button>
+         </children></HBox>
+      <TabPane layoutY="57.0" prefHeight="572.0" prefWidth="1479.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Аналитика">
+                <content>
+                    <fx:include source="table/analytics-tab.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Разработка">
+                <content>
+                    <fx:include source="table/development-tab.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Модерация">
+                <content>
+                    <fx:include source="table/moderation-tab.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Проекты">
+                <content>
+                    <fx:include source="table/project-tab.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Пользователи проектов">
+                <content>
+                    <fx:include source="table/project-user-tab.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Типы требований">
+                <content>
+                    <fx:include source="table/requirement-type-tab.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Роли">
+                <content>
+                    <fx:include source="table/role-tab.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Тестирование">
+                <content>
+                    <fx:include source="table/testing-tab.fxml" />
+                </content>
+            </Tab>
+            <Tab fx:id="usersTab" text="Пользователи">
+                <content>
+                    <fx:include source="table/user-tab.fxml" />
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

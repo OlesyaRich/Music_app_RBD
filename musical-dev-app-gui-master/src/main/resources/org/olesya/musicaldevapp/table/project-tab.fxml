@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="548.0" prefWidth="1472.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.olesya.musicaldevapp.controller.ProjectController">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <TableView fx:id="projectTable" prefHeight="299.0" prefWidth="1451.0">
+            <columns>
+                <TableColumn fx:id="projectIdProjectTable" prefWidth="202.20000302791595" text="ID проекта" />
+                <TableColumn fx:id="projectNameProjectTable" minWidth="0.0" prefWidth="206.79998779296875" text="Имя проекта" />
+                <TableColumn fx:id="createDateProjectTable" minWidth="0.0" prefWidth="206.79998779296875" text="Дата создания" />
+                <TableColumn fx:id="lastChangeDateProjectTable" minWidth="0.0" prefWidth="206.79998779296875" text="Дата последнего редактирования" />
+                <TableColumn fx:id="versionProjectTable" minWidth="0.0" prefWidth="206.79998779296875" text="Версия" />
+            </columns>
+        </TableView>
+        <VBox layoutX="-1.0" layoutY="299.0" prefHeight="246.0" prefWidth="1466.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Поиск">
+                            <HBox.margin>
+                                <Insets left="20.0" right="10.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label text="ID проекта:">
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="projectIdProjectTextField" prefHeight="26.0" prefWidth="270.0" promptText="Введите ID проекта (UUID)..." />
+                        <Label layoutX="77.0" layoutY="52.0" text="Имя проекта:">
+                            <padding>
+                                <Insets left="10.0" right="10.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="projectNameProjectTextField" layoutX="170.0" layoutY="47.0" prefHeight="26.0" prefWidth="270.0" promptText="Введите имя проекта (Строка)..." />
+                        <Button fx:id="projectFilterButton" mnemonicParsing="false" text="Фильтровать">
+                            <HBox.margin>
+                                <Insets left="100.0" />
+                            </HBox.margin></Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="1466.0">
+                    <children>
+                        <Label text="Изменение">
+                            <HBox.margin>
+                                <Insets left="20.0" right="10.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <VBox prefHeight="84.0" prefWidth="1366.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="1366.0">
+                                    <children>
+                                        <Label text="ID проекта:">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="projectIdInputField" editable="false" prefHeight="26.0" prefWidth="202.0" promptText="Заполняется автоматически" style="-fx-background-color: e6e6e6;">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin></TextField>
+                                        <Label layoutX="10.0" layoutY="28.0" text="Имя проекта:">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="projectNameInputField" prefHeight="26.0" prefWidth="190.0" promptText="Введите имя проекта (Строка)...">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                        <Label layoutX="316.0" layoutY="28.0" text="Версия:">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="versionInputField" layoutX="628.0" layoutY="18.0" prefHeight="26.0" prefWidth="247.0" promptText="Введите версию (Строка)..." />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" prefHeight="76.0" prefWidth="1366.0">
+                                    <children>
+                                        <Label text="Дата создания:">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="createDateInputField" editable="false" prefHeight="26.0" prefWidth="202.0" promptText="Заполняется автоматически" style="-fx-background-color: e6e6e6;">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                        <Label layoutX="10.0" layoutY="21.0" text="Дата последнего редактирования:">
+                                            <padding>
+                                                <Insets right="10.0" />
+                                            </padding>
+                                        </Label>
+                                        <TextField fx:id="lastChangeDateInputField" editable="false" layoutX="103.0" layoutY="16.0" prefHeight="26.0" prefWidth="202.0" promptText="Заполняется автоматически" style="-fx-background-color: e6e6e6;">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="41.0" prefWidth="1466.0">
+                    <children>
+                        <Button fx:id="saveChangesButton" disable="true" mnemonicParsing="false" text="Изменить">
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="deleteButton" disable="true" layoutX="703.0" layoutY="18.0" mnemonicParsing="false" text="Удалить">
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="addButton" layoutX="748.0" layoutY="18.0" mnemonicParsing="false" text="Добавить">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="stopSelectionButton" mnemonicParsing="false" text="Снять выделение">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="checkProjectAggregatedInfoButton" disable="true" mnemonicParsing="false" text="Просмотреть агрегированные данные по проекту" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </AnchorPane>
+</AnchorPane>

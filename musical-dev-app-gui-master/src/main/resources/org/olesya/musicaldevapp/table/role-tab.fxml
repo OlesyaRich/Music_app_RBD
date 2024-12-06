@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="555.0" prefWidth="1473.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.olesya.musicaldevapp.controller.RoleController">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <TableView fx:id="rolesTable" prefHeight="299.0" prefWidth="1449.0">
+            <columns>
+                <TableColumn fx:id="roleIdRolesTable" prefWidth="202.20000302791595" text="ID роли" />
+                <TableColumn fx:id="roleNameRolesTable" minWidth="0.0" prefWidth="206.79998779296875" text="Имя роли" />
+            </columns>
+        </TableView>
+        <VBox layoutX="-1.0" layoutY="299.0" prefHeight="246.0" prefWidth="1466.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Поиск">
+                            <HBox.margin>
+                                <Insets left="20.0" right="10.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label text="ID роли:">
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="roleIdRoleTextField" prefHeight="26.0" prefWidth="270.0" promptText="Введите ID роли (UUID)..." />
+                        <Label layoutX="77.0" layoutY="52.0" text="Имя роли:">
+                            <padding>
+                                <Insets left="10.0" right="10.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="roleNameRoleTextField" layoutX="170.0" layoutY="47.0" prefHeight="26.0" prefWidth="270.0" promptText="Введите имя роли (Строка)..." />
+                        <Button fx:id="roleFilterButton" mnemonicParsing="false" text="Фильтровать">
+                            <HBox.margin>
+                                <Insets left="100.0" />
+                            </HBox.margin></Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="1466.0">
+                    <children>
+                        <Label text="Изменение">
+                            <HBox.margin>
+                                <Insets left="20.0" right="10.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <VBox prefHeight="84.0" prefWidth="1366.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="1366.0">
+                                    <children>
+                                        <Label text="ID роли:">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="roleIdInputField" editable="false" prefHeight="26.0" prefWidth="202.0" promptText="Заполняется автоматически" style="-fx-background-color: e6e6e6;">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin></TextField>
+                                        <Label layoutX="10.0" layoutY="28.0" text="Имя роли:">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="roleNameInputField" prefHeight="26.0" prefWidth="190.0" promptText="Введите имя роли (Строка)...">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="41.0" prefWidth="1466.0">
+                    <children>
+                        <Button fx:id="saveChangesButton" disable="true" mnemonicParsing="false" text="Изменить">
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="deleteButton" disable="true" layoutX="703.0" layoutY="18.0" mnemonicParsing="false" text="Удалить">
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="addButton" layoutX="748.0" layoutY="18.0" mnemonicParsing="false" text="Добавить">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="stopSelectionButton" mnemonicParsing="false" text="Снять выделение" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </AnchorPane>
+</AnchorPane>
