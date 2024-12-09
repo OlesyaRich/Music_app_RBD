@@ -25,6 +25,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public class ProjectController {
@@ -355,7 +356,7 @@ public class ProjectController {
             try {
                 if (selectedProject == null)
                     throw new CommonException(
-                            "Для просмотра агрегированных данных по проекту выберете проект"
+                            "Для просмотра агрегированных данных по проекту выберите проект"
                     );
                 ProjectAggregatedInfo projectAggregatedInfo = projectRepository.getProjectAggregatedInfo(
                         selectedProject.getProjectId()
@@ -447,6 +448,8 @@ public class ProjectController {
         dialog.getDialogPane().setContent(grid);
 
         dialog.setResultConverter(dialogButton -> dialogButton == stopViewingButtonType);
+
+        Optional<Boolean> result = dialog.showAndWait();
     }
 
     private boolean checkIfTheCurrentUserIsAdmin() throws CommonException {

@@ -301,7 +301,7 @@ public class DevelopmentController {
                 development.setCodeFile(getContentInputField());
                 development.setVersion(getVersionInputField());
                 development.setCreateDate(LocalDate.now());
-                //development.setLastChangeDate(LocalDate.now());
+                development.setLastChangeDate(LocalDate.now());
                 development.setFileExtension(getFileExtensionInputField());
                 developmentRepository.saveDevelopment(
                         development

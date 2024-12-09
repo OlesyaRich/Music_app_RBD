@@ -216,7 +216,7 @@ public class UserController {
         userIdInputField.setText("");
         roleChoiceBox.getSelectionModel().select(0);
         userNameInputField.setText("");
-        userAgeUsersTable.setText("");
+        ageInputField.setText("");
         passwordInputField.setText("");
     }
 
@@ -224,7 +224,7 @@ public class UserController {
         userIdInputField.setText(selectedUser.getUserId().toString());
         roleChoiceBox.getSelectionModel().select(selectedUser.getRoleName());
         userNameInputField.setText(selectedUser.getUserName());
-        userAgeUsersTable.setText(selectedUser.getUserAge().toString());
+        ageInputField.setText(selectedUser.getUserAge().toString());
         passwordInputField.setText(selectedUser.getPassword());
     }
 

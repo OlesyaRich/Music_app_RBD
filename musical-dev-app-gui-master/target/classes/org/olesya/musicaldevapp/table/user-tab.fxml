@@ -5,13 +5,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="551.0" prefWidth="1467.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.olesya.musicaldevapp.controller.ProjectUserController">
+<AnchorPane prefHeight="564.0" prefWidth="1475.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.olesya.musicaldevapp.controller.UserController">
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-        <TableView fx:id="projectUsersTable" prefHeight="299.0" prefWidth="1454.0">
+        <TableView fx:id="usersTable" prefHeight="299.0" prefWidth="1466.0">
             <columns>
-                <TableColumn fx:id="projectUsersNameProjectUsersTable" prefWidth="202.20000302791595" text="ID записи" />
-                <TableColumn fx:id="projectNameProjectUsersTable" minWidth="0.0" prefWidth="206.79998779296875" text="Имя проекта" />
-                <TableColumn fx:id="userNameProjectUsersTable" minWidth="0.0" prefWidth="206.79998779296875" text="Имя пользователя" />
+                <TableColumn fx:id="userIdUsersTable" prefWidth="202.20000302791595" text="ID пользователя" />
+                <TableColumn fx:id="roleNameUsersTable" minWidth="0.0" prefWidth="206.79998779296875" text="Роль" />
+                <TableColumn fx:id="usernameUsersTable" minWidth="0.0" prefWidth="206.79998779296875" text="Логин" />
+                <TableColumn fx:id="userAgeUsersTable" minWidth="0.0" prefWidth="206.79998779296875" text="Возраст" />
+                <TableColumn fx:id="passwordUsersTable" minWidth="0.0" prefWidth="206.79998779296875" text="Пароль" />
             </columns>
         </TableView>
         <VBox layoutX="-1.0" layoutY="299.0" prefHeight="246.0" prefWidth="1466.0">
@@ -26,25 +28,25 @@
                                 <Font name="System Bold" size="12.0" />
                             </font>
                         </Label>
-                        <Label text="ID записи:">
+                        <Label text="ID пользователя:">
                             <padding>
                                 <Insets right="10.0" />
                             </padding>
                         </Label>
-                        <TextField fx:id="projectUserIdProjectUserTextField" prefHeight="26.0" prefWidth="270.0" promptText="Введите ID записи (UUID)..." />
-                        <Label layoutX="77.0" layoutY="52.0" text="Имя проекта:">
+                        <TextField fx:id="userIdUserTextField" prefHeight="26.0" prefWidth="270.0" promptText="Введите ID пользователя (UUID)..." />
+                        <Label layoutX="77.0" layoutY="52.0" text="Роль:">
                             <padding>
                                 <Insets left="10.0" right="10.0" />
                             </padding>
                         </Label>
-                        <TextField fx:id="projectNameProjectUserTextField" layoutX="170.0" layoutY="47.0" prefHeight="26.0" prefWidth="270.0" promptText="Введите имя проекта (Строка)..." />
-                  <Label layoutX="440.0" layoutY="52.0" text="Имя пользователя:">
+                        <TextField fx:id="roleNameUserTextField" layoutX="170.0" layoutY="47.0" prefHeight="26.0" prefWidth="270.0" promptText="Введите роль (Строка)..." />
+                  <Label layoutX="440.0" layoutY="52.0" text="Логин:">
                      <padding>
                         <Insets left="10.0" right="10.0" />
                      </padding>
                   </Label>
-                  <TextField fx:id="userNameProjectUserTextField" layoutX="536.0" layoutY="47.0" prefHeight="26.0" prefWidth="270.0" promptText="Введите имя пользователя (Строка)..." />
-                        <Button fx:id="projectUserFilterButton" mnemonicParsing="false" text="Фильтровать">
+                  <TextField fx:id="usernameUserTextField" layoutX="536.0" layoutY="47.0" prefHeight="26.0" prefWidth="270.0" promptText="Введите логин (Строка)..." />
+                        <Button fx:id="userFilterButton" mnemonicParsing="false" text="Фильтровать">
                             <HBox.margin>
                                 <Insets left="100.0" />
                             </HBox.margin></Button>
@@ -64,35 +66,51 @@
                             <children>
                                 <HBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="1366.0">
                                     <children>
-                                        <Label text="ID записи:">
+                                        <Label text="ID пользователя:">
                                             <HBox.margin>
                                                 <Insets right="10.0" />
                                             </HBox.margin>
                                         </Label>
-                                        <TextField fx:id="projectUserIdInputField" editable="false" prefHeight="26.0" prefWidth="202.0" promptText="Заполняется автоматически" style="-fx-background-color: e6e6e6;">
+                                        <TextField fx:id="userIdInputField" editable="false" prefHeight="26.0" prefWidth="202.0" promptText="Заполняется автоматически" style="-fx-background-color: e6e6e6;">
                                             <HBox.margin>
                                                 <Insets right="10.0" />
                                             </HBox.margin></TextField>
-                                        <Label layoutX="10.0" layoutY="28.0" text="Имя проекта:">
+                                        <Label layoutX="10.0" layoutY="28.0" text="Роль:">
                                             <HBox.margin>
                                                 <Insets right="10.0" />
                                             </HBox.margin>
                                         </Label>
-                                        <TextField fx:id="projectNameInputField" prefHeight="26.0" prefWidth="190.0" promptText="Введите имя проекта (Строка)...">
-                                            <HBox.margin>
-                                                <Insets right="10.0" />
-                                            </HBox.margin>
-                                        </TextField>
-                                        <Label layoutX="601.0" layoutY="28.0" text="Имя пользователя">
+                              <ChoiceBox fx:id="roleChoiceBox" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                                        <Label layoutX="601.0" layoutY="28.0" text="Логин:">
                                             <HBox.margin>
                                                 <Insets right="10.0" />
                                             </HBox.margin>
                                         </Label>
-                                        <TextField fx:id="userNameInputField" layoutX="400.0" layoutY="23.0" prefHeight="26.0" prefWidth="204.0" promptText="Введите имя пользователя (Строка)...">
+                                        <TextField fx:id="userNameInputField" layoutX="400.0" layoutY="23.0" prefHeight="26.0" prefWidth="204.0" promptText="Введите логин (Строка)...">
                                             <HBox.margin>
                                                 <Insets right="10.0" />
                                             </HBox.margin>
                                         </TextField>
+                                        <Label layoutX="316.0" layoutY="28.0" text="Возраст:">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="ageInputField" layoutX="628.0" layoutY="18.0" prefHeight="26.0" prefWidth="283.0" promptText="Введите возраст (Целое положительное число)..." />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" prefHeight="76.0" prefWidth="1366.0">
+                                    <children>
+                                        <Label layoutX="316.0" layoutY="21.0" text="Пароль:">
+                                            <padding>
+                                                <Insets right="10.0" />
+                                            </padding>
+                                        </Label>
+                                        <TextField fx:id="passwordInputField" prefHeight="26.0" prefWidth="226.0" promptText="Введите пароль (Строка)..." />
                                     </children>
                                 </HBox>
                             </children>

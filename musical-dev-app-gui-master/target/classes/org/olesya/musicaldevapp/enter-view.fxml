@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="283.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.olesya.musicaldevapp.EnterViewController">
+   <children>
+      <Label layoutX="56.0" layoutY="124.0" text="Имя пользователя:" />
+      <Label layoutX="47.0" layoutY="173.0" text="Пароль пользователя:" />
+      <Button fx:id="enterButton" layoutX="363.0" layoutY="219.0" mnemonicParsing="false" text="Войти" />
+      <Button fx:id="goBackButton" layoutX="177.0" layoutY="219.0" mnemonicParsing="false" text="Назад" />
+      <TextField fx:id="usernameTextField" layoutX="180.0" layoutY="120.0" prefHeight="26.0" prefWidth="394.0" promptText="Введите логин..." />
+      <PasswordField fx:id="passwordTextField" layoutX="180.0" layoutY="169.0" prefHeight="26.0" prefWidth="394.0" promptText="Введите пароль...." />
+      <Label layoutX="222.0" layoutY="45.0" text="Авторизация">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
